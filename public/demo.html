@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>数据元</title>
+</head>
+
+<body>
+    <body class="AllbgColor">
+        <div class="searchLog  bgColorFFF">
+            <div>
+                <div class="">
+                    <div class="paddingT8 paddingB8">
+                        <!-- 查询条件 -->
+                        <form id="searchForm" class="form-inline" style="width:100%;">
+                            <!-- <input type="hidden" name="affiliated" id="affiliated"><input
+                        type="hidden" name="typeID" id="dataTypeSearch">
+                         -->
+                            <div class="height32">
+                                <div class="form-group marginR16 marginB8">
+                                    <label for="searchOrg">业务单位：</label>
+                                    <select class="form-control input-sm width160 select2" name="affiliated"
+                                        id="searchOrg">
+                                    </select>
+                                </div>
+                                <div class="form-group marginR16 marginB8">
+                                    <label for="searchCode">业务分类：</label>
+                                    <select class="form-control input-sm width160 select2" name="typeID"
+                                        id="searchCode">
+                                        <option value="">--请选择--</option>
+                                    </select>
+                                </div>
+                                <div class="form-group marginR16 marginB8">
+                                    <label for="idCodeSearch">标识符：</label><input type="text"
+                                        class="form-control input-sm" id="idCodeSearch" name="dataElementID"
+                                        placeholder="标识符">
+                                </div>
+                                <div class="form-group marginR16 marginB8">
+                                    <label for="colNameSearch">字段名：</label> <input type="email"
+                                        class="form-control input-sm" id="colNameSearch" name="field" placeholder="字段名">
+                                </div>
+                                <div class="form-group marginR16 marginB8">
+                                    <label for="cnNameSearch">字段中文名：</label><input type="email"
+                                        class="form-control input-sm" id="cnNameSearch" name="fieldName"
+                                        placeholder="中文名">
+                                </div>
+                                <div class="form-group marginB8 marginR24">
+                                    <label for="isDeprecated">状态：</label>
+                                    <select class="form-control input-sm width160" name="isDeprecated"
+                                        id="isDeprecated">
+                                        <option value="">请选择</option>
+                                        <option value="1">使用中</option>
+                                        <option value="2">已弃用</option>
+                                    </select>
+                                </div>
+                                <div class="form-group marginR16 marginB8 more">
+                                    <input type="button" readonly="readonly" onclick="moreHeight()">
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-group marginB8 marginR16 ">
+                                    <button type="button" class="btn btn-sm btn-primary marginR8 "
+                                        onClick="search('tablewrap1')">搜索
+                                    </button><button type="button" class="btn btn-sm btn-default marginR8 "
+                                        onClick="resetForm('searchForm','tablewrap1')">重置</button>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="/static/data-element/dataElementListAdd.html" type="button"
+                                        class="btn btn-sm btn-primary">新增
+                                    </a><button type="button" class="btn btn-sm btn-primary marginL8" data-object="2"
+                                        data-operation="2" onClick="inhert()">继承</button><button type="button"
+                                        class="btn btn-sm btn-primary marginL8 daochu" data-object="2"
+                                        data-operation="2" onClick="exportData()">导出列表</button>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+
+                        </form>
+
+                    </div>
+                    <!-- 数据元列表 -->
+                    <div class="paddingT8 hidePaginationLeft showTableCheckbox">
+                        <table id="tablewrap1" data-toggle="table" data-locale="zh-CN" class="table"
+                            data-ajax="ajaxRequest" data-icon-size="sm" data-single-select="false"
+                            data-click-to-select="true" data-side-pagination="server" data-striped="true"
+                            data-pagination="true" data-maintain-selected="true" class="fline-show-when-ready"
+                            data-response-handler="responseHandler">
+                            <thead>
+                                <tr>
+                                    <th data-field="state" data-checkbox="true"></th>
+                                    <th data-field="id" data-formatter="idFormatter" data-width="40">序号</th>
+                                    <th data-field="dataElementID">标识符</th>
+                                    <th data-field="field">字段名</th>
+                                    <th data-field="fieldName">字段中文名</th>
+                                    <th data-field="affiliatedName">业务单位</th>
+                                    <th data-field="typeIdName">业务分类</th>
+                                    <th data-field="isDeprecated" data-formatter="formatType">状态</th>
+                                    <th data-field="dataFormat">数据格式</th>
+                                    <th data-field="dataFormatID" data-formatter="dataFormatFormatter">代码集/验证规则</th>
+                                    <th data-field="version" data-formatter="operateFormat">操作</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
