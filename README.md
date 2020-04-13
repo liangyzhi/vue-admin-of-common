@@ -1,10 +1,5 @@
-
-# com.fline.datasecure
-
 # vue模板项目
-
-> 为了之后可以快速开发的vue的基本页面,此项目依赖vue-cli 3.0及其以上版本,请确保本地有相关环境支持!
-
+a project!
 ## Build Setup
 
 ``` bash
@@ -27,4 +22,3 @@ npm run unit
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
